@@ -22,11 +22,14 @@ public class MyBatisTest {
             SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
             //获取连接
             session = factory.openSession();
+
+            StudentDao studentDao = session.getMapper(StudentDao.class);
             //执行指定的SQL语句
-            int affectRows = session.insert("StudentMapper.add");
+            int affectRows = studentDao.add();
 
             //所有的增删改操作都需要提交
             session.commit();
+            session.close();
 
             System.out.println("受影响的行数" +affectRows);
 
@@ -50,8 +53,10 @@ public class MyBatisTest {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         //获取sqlSession,这个东西类似queryQunner.包含了对数据库的操作
         SqlSession session = sqlSessionFactory.openSession();
+
+        StudentDao studentDao = session.getMapper(StudentDao.class);
         //执行指定命名空间下的指定sql语句
-        Object o = session.selectOne("StudentMapper.select");
+        Object o = studentDao.selectOne();
         System.out.println(o);
     } catch (IOException e) {
         e.printStackTrace();
