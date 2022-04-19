@@ -1,0 +1,40 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<!DOCTYPE configuration-->
+<!--        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"-->
+<!--        "http://mybatis.org/dtd/mybatis-3-config.dtd">-->
+<!--&lt;!&ndash;mybatis配置&ndash;&gt;-->
+<!--<configuration>-->
+
+<!--    &lt;!&ndash;导入了jdbc.properties配置文件&ndash;&gt;-->
+<!--    <properties resource="jdbc.properties"/>-->
+
+<!--    <settings>-->
+<!--        &lt;!&ndash;配置log4j日志&ndash;&gt;-->
+<!--        <setting name="logImpl" value="LOG4J2"/>-->
+<!--        &lt;!&ndash;开启下划线转驼峰命名&ndash;&gt;-->
+<!--        <setting name="mapUnderscoreToCamelCase" value="true"/>-->
+<!--    </settings>-->
+
+<!--    &lt;!&ndash;mybatis运行环境配置&ndash;&gt;-->
+<!--    <environments default="development">-->
+<!--        <environment id="development">-->
+<!--            &lt;!&ndash;事务管理器&ndash;&gt;-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--            &lt;!&ndash;数据源，type对应数据源的类型&ndash;&gt;-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="${jdbc.driver}"/>-->
+<!--                <property name="url" value="${jdbc.url}"/>-->
+<!--                <property name="username" value="${jdbc.username}"/>-->
+<!--                <property name="password" value="${jdbc.password}"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
+
+<!--    &lt;!&ndash;指定Mapper.xml的路径位置&ndash;&gt;-->
+<!--    <mappers>-->
+<!--        <mapper resource="com/fc/mapper/EmployeeMapper.xml"/>-->
+<!--        <mapper resource="com/fc/mapper/DepartmentMapper.xml"/>-->
+<!--        <mapper resource="com/fc/mapper/StudentMapper.xml"/>-->
+<!--        <mapper resource="com/fc/mapper/SubjectMapper.xml"/>-->
+<!--    </mappers>-->
+<!--</configuration>-->
